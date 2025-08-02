@@ -146,6 +146,7 @@ def build_package_deb(
     build_args = list()
     build_args.append(f"--build-arg PACKAGE_TYPE={os_type}")
     build_args.append(f"--build-arg PACKAGE_VERSION={os_version}")
+    build_args.append(f"--build-arg BUILD_VERSION={build_version}")
     build_args.append(f"--build-arg PACKAGE_ARCH={PACKAGE_ARCH}")
     build_args.append(f"--build-arg GCC_VERSION={crossgccvers}")
 
